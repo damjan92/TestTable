@@ -1,0 +1,7 @@
+{
+  "tests/home/login_test.py::LoginTest::test_generate_table": true,
+  "tests/home/login_test.py::LoginTest::test_invalid_password": true,
+  "tests/home/login_test.py::LoginTest::test_invalid_password_1____tester_email_com_____abc___": true,
+  "tests/home/login_test.py::LoginTest::test_invalid_password_4___abc__": true,
+  "tests/testing.py::DataTableTest::test_generating_table_1___5__": true
+}

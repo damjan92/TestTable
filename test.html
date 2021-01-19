@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script>
+	function tableCreate(){
+	
+		var myobj = document.getElementById("testTable");
+		if (myobj != null) 
+		{
+			myobj.remove();
+		}
+		var body = document.body,
+			tbl  = document.createElement('table');
+			
+		tbl.setAttribute("id", "testTable");
+		tbl.style.width  = '100px';
+		tbl.style.border = '1px solid black';
+		var rows = document.getElementById("lname").value;
+		
+
+		for(var i = 0; i < rows; i++){
+			var tr = tbl.insertRow();
+			for(var j = 0; j < 2; j++){
+				var td = tr.insertCell();
+				td.classList.add('cell-' + j);
+				var cellValue = Math.floor(Math.random() * 100);
+				td.appendChild(document.createTextNode(cellValue));
+				td.style.border = '1px solid black';					
+			}
+		}
+		body.appendChild(tbl);
+	}
+</script>
+</head>
+<body>
+
+<h1>Automation test</h1>
+
+<p>
+	<ul>
+	  <li>Enter a number 5 in the input field. </li>
+	  <li>Click the Generate table button.</li>
+	  <li>Check that the sum of all numbers in the first column is greater than 0.</li>
+	  <li>Check that the sum of all numbers in the second column, greater than 50 is divisible by 2.</li>
+	  <li>Repeat the test for 6,7,8,9,10 as input value</li>
+	</ul>
+</p>
+
+<input type="text" id="lname" name="lname"><br><br>
+
+<button type="button" onclick="tableCreate()">Generate Table</button><br><br>
+
+</body>
+</html>
+
+
